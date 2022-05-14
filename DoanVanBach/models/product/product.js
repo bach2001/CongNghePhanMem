@@ -19,7 +19,18 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    //...
+    pQuantity: {
+        type: Number,
+        default: 0,
+      },
+      pCategory: {
+        type: ObjectId,
+        ref: "categories",
+      },
+      pImages: {
+        type: Array,
+        required: true,
+      },
     pOffer: {
       type: String,
       default: null,
